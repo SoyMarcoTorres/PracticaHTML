@@ -1,0 +1,51 @@
+h1, h2, h3 {
+    font-family: 'Fredoka', sans-serif;
+}
+
+p {
+    font-family: 'Hubballi', cursive;
+}
+
+body {
+    background-color: #CCCCCC;
+    margin: 0;
+}
+
+header {
+    background-image: url(/img/Logo.jpg);
+    background-color: #86F4F6;
+    background-position-x: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    padding: 11rem;
+}
+
+.container {
+    width: 400px;
+    margin: 0 auto;
+}
+
+section article {
+    background-color: #fff;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0;
+}
+
+section article:hover {
+    transition: all 0.3s ease;
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+
+section article h2, section article p {
+    margin: 1rem;
+}
+
+.btns {
+    font-size: larger;
+    margin: 3rem;
+}

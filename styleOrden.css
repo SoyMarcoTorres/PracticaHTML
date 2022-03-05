@@ -1,0 +1,39 @@
+h1, h2, h3 {
+    font-family: 'Fredoka', sans-serif;
+}
+
+p {
+    font-family: 'Hubballi', cursive;
+}
+
+body {
+    background-color: #CCCCCC;
+    margin: 0;
+}
+
+header {
+    background-image: url(/img/Logo.jpg);
+    background-color: #86F4F6;
+    background-position-x: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    padding: 11rem;
+}
+
+.form {
+    font-size: larger;
+    margin: 3rem;
+}
+
+#porden {
+    text-align: center;
+    font-size: larger;
+}
+
+.preparar {
+    text-align: left;
+    margin: 3rem;
+    font-size: larger;
+}

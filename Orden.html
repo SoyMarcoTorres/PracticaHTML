@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orden</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&family=Hubballi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styleOrden.css">
+</head>
+<body>
+    <header>
+        <h1 id="ordentitulo"></h1>
+    </header>
+    
+    <section class="preparar">
+        <h2 id="porden">Prepara tu orden...</h2>
+        <br>
+        <p>Por favor, llena el siguiente formulario con los datos que se requieren.</p>
+    </section>
+    <br>
+    <form class="form" action="/formulario" method="post">
+        <label for="nombre">Nombre</label>
+        <input required type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre"><br>
+        <label for="apellido">Apellido</label>
+        <input required type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido"><br>
+        <label for="numero">Número telefónico</label>
+        <input required type="text" name="numero" placeholder="Ingresa tu número"><br>
+        <label for="mail">Correo electrónico</label>
+        <input required type="email" name="mail" id="mail" placeholder="Ingresa tu correo electrónico"><br>
+        <label for="direccion">Dirección</label><br>
+        <textarea required name="direccion" id="direccion" cols="50" rows="10" placeholder="Inserta tu dirección aquí"></textarea>
+        <p>¿Qué vas a ordenar?</p>
+        <!--Elije el pastel-->
+        <h3>Pasteles</h3>
+        <p>Puedes escoger más de un sabor, pero con un límite de 3 cada uno...</p>
+        <!--<p>Grande --------------------- $300.00</p>
+        <p>Mediano -------------------- $230.00</p>
+        <p>Chico ---------------------- $180.00</p>-->
+        <input type="checkbox" id="lechesPastel" name="lechesPastel" value="lechesPastel">
+        <label for="leches">3 Leches</label>
+        <input type="number" id="lechesCuantos" name="lecheCuantos" placeholder="Cantidad" min="1" max="3">
+        <select name="LechesT" id="LechesT">Elige el tamaño
+            <option value="Grande">Grande</option>
+            <option value="Mediano">Mediano</option>
+            <option value="Chico">Chico</option>
+        </select><br>
+        <input type="checkbox" id="chocolatePastel" name="chococolatePastel" value="chocolatePastel">
+        <label for="chcocolate">Chococolate</label>
+        <input type="number" id="chocolateCuantos" name="chocolateCuantos" placeholder="Cantidad" min="1" max="3">
+        <select name="ChocoT" id="ChocoT">Elige el tamaño
+            <option value="Grande">Grande</option>
+            <option value="Mediano">Mediano</option>
+            <option value="Chico">Chico</option>
+        </select><br>
+        <input type="checkbox" id="vainillaPastel" name="vainillaPastel" value="vainillaPastel">
+        <label for="vainilla">Vainilla</label>
+        <input type="number" id="vainillaCuantos" name="vainillaCuantos" placeholder="Cantidad" min="1" max="3">
+        <select name="VainillaT" id="VainillaT">Elige el tamaño
+            <option value="Grande">Grande</option>
+            <option value="Mediano">Mediano</option>
+            <option value="Chico">Chico</option>
+        </select><br>
+        <input type="checkbox" id="quesoPastel" name="quesoPastel" value="quesoPastel">
+        <label for="queso">Queso</label>
+        <input type="number" id="quesoCuantos" name="quesoCuantos" placeholder="Cantidad" min="1" max="3">
+        <select name="QuesoT" id="QuesoT">Elige el tamaño
+            <option value="Grande">Grande</option>
+            <option value="Mediano">Mediano</option>
+            <option value="Chico">Chico</option>
+        </select><br>
+        <input type="checkbox" id="cafePastel" name="cafePastel" value="cafePastel"> 
+        <label for="cafe">Café</label>
+        <input type="number" id="cafeCuantos" name="cafeCuantos" placeholder="Cantidad" min="1" max="3">
+        <select name="CafeT" id="CafeT">Elige el tamaño
+            <option value="Grande">Grande</option>
+            <option value="Mediano">Mediano</option>
+            <option value="Chico">Chico</option>
+        </select><br>
+        
+        <!--Elije el relleno TOPPINGS-->
+        <p>Toppings</p>
+        <select required name="topping" id="topping">
+            <option value="NuezTop">Nuez</option>
+            <option value="MangoTop">Mango</option>
+            <option value="DuraznoTop">Durazno</option>
+            <option value="KiwiTop">Kiwi</option>
+            <option value="ChocoTop">Trozos de chococolate</option>
+            <option value="CafeTop">Trozos de café</option>
+        </select>
+
+        <p>¿Deseas agregar otro topping?</p>
+        <p>Tiene un costo extra de $35.00</p>
+        <select name="topping2" id="topping2">
+            <option value="NuezTop2">Nuez</option>
+            <option value="MangoTop2">Mango</option>
+            <option value="DuraznoTop2">Durazno</option>
+            <option value="KiwiTop2">Kiwi</option>
+            <option value="ChocoTop2">Trozos de chococolate</option>
+            <option value="CafeTop2">Trozos de café</option>
+        </select>
+
+        <!--Diseño-->
+        <h3>¿Quieres que tu pastel tenga un diseño?</h3>
+        <p>Elige uno de los diseños</p>
+        <p>Infantiles</p>
+        <input type="radio" name="batman" id="batman">
+        <label for="batman">Batman</label><br>
+        <input type="radio" name="spiderman" id="spiderman">
+        <label for="spiderman">Spider-Man</label><br>
+        <input type="radio" name="wonderwoman" id="wonderwoman">
+        <label for="wonderwoman">Wonder Woman</label><br>
+        <p>Boda</p>
+        <input type="radio" name="boda1" id="boda1">
+        <label for="boda1">Diseño 1</label><br>
+        <input type="radio" name="boda2" id="boda2">
+        <label for="boda2">Diseño 2</label><br>
+        <p>XV Años</p>
+        <input type="radio" name="xv1" id="xv1">
+        <label for="xv1">Diseño 1</label><br>
+        <input type="radio" name="xv2" id="xv2">
+        <label for="xv2">Diseño 2</label><br>
+
+        <!--Agrega un extra a su orden-->
+        <h3>Otros serivicios</h3>
+        <P>¿Deseas algún panque?</P>
+        <p>Puedes agregar un máximo de 3 c/u</p>
+        <input type="checkbox" name="naranjaPanque" id="naranjaPanque">
+        <label for="naranjaPanqye">Naranja</label>
+        <input type="number" id="naranjaPanqueCuantos" name="naranjaPanqueCuantos" placeholder="Cantidad" min="1" max="3"><br>
+        <input type="checkbox" name="cafePanque" id="cafePanque">
+        <label for="cafePanque">Café</label>
+        <input type="number" id="cafePanqueCuantos" name="cafePanqueCuantos" placeholder="Cantidad" min="1" max="3"><br>
+        <input type="checkbox" name="nuezPanque" id="nuezPanque">
+        <label for="nuezPanque">Nuez</label>
+        <input type="number" id="nuezPanqueCuantos" name="nuezPanqueCuantos" placeholder="Cantidad" min="1" max="3"><br>
+
+        <p>¿Deseas algún Cupcake?</p>
+        <p>Puedes agregar un máximo de 10 c/u</p>
+        <input type="checkbox" id="limon" name="limon" value="limon">
+        <label for="limon">Limon</label>
+        <input type="number" id="limCupCuantos" name="limCupCuantos" placeholder="Cantidad" min="1" max="10"><br>
+        <input type="checkbox" id="nata" name="limon" value="nata">
+        <label for="nata">Nata</label>
+        <input type="number" id="nataCupCuantos" name="nataCupCuantos" placeholder="Cantidad" min="1" max="10"><br>
+        <input type="checkbox" id="chocoCup" name="chocoCup" value="chocoCup">
+        <label for="chocoCup">Chocolate</label>
+        <input type="number" id="chocoCupCuantos" name="chocoCupCuantos" placeholder="Cantidad" min="1" max="10"><br>
+        <input type="checkbox" id="caramelo" name="caramelo" value="caramelo">
+        <label for="caramelo">Caramelo</label>
+        <input type="number" id="carameloCupCuantos" name="carameloCupCuantos" placeholder="Cantidad" min="1" max="10"><br>
+        <input type="checkbox" id="fresa" name="fresa" value="fresa">
+        <label for="fresa">Fresa</label>
+        <input type="number" id="fresaCupCuantos" name="fresaCupCuantos" placeholder="Cantidad" min="1" max="10"><br>
+        <input type="checkbox" id="almendras" name="almendras" value="almendras">
+        <label for="almendras">Almendras</label>
+        <input type="number" id="almCupCuantos" name="almCupCuantos" placeholder="Cantidad" min="1" max="10"><br>
+        <input type="checkbox" id="cafeCup" name="cafeCup" value="cafeCup">
+        <label for="checkbox">Café</label>
+        <input type="number" id="cafeCupCuantos" name="cafeCupCuantos" placeholder="Cantidad" min="1" max="10"><br>
+
+        <br>
+        <br>
+        <input type="reset">
+        <input type="submit">
+        <br>
+    </form>
+</body>
+</html>
